@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="sub.css" /> -->
+    <link rel="stylesheet" href="../static/css/style2.css" />
+    <link rel="stylesheet" href="../static/css/payment.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+    <title>payment</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- for tetting
+    number: 5114988175561651
+    cvv/cvc :351
+    date: 03/2024
+    
+    
+    
+    
+    -->
+    <!------------------------- title + icons------------------------->
+
+    <div class="shopping-cart">
+
+
+        <div style="background-image: url('images/pexels-arina-krasnikova-7726094.jpg') !important;" class='container'>
+
+            <div class='window'>
+                <div class='order-info'>
+                    <div class='order-info-content'>
+
+                        <div>
+                            <div style="float: left; display:inline">
+                                <button id="back-to-store">
+                                    <a href="/store">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 2px; " width="25"
+                                            height="25" fill="#123146" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg>
+                                    </a>
+
+                                </button>
+
+                            </div>
+                            <h2>Order Summary</h2>
+                        </div>
+
+
+                        {% for items in cart_items %}
+                        <div class='line'></div>
+                        <table class='order-table'>
+                            <tbody>
+                                <tr>
+                                    <td><img style="width: 50px; height: 50px;" src="../static/items_img/{{ items['photo'] }}" class='full-width'></img>
+                                    </td>
+                                    <div>
+                                        <td>
+                                            <br><span class='thin'>{{ items['name'] }}</span>
+                                            <span id="x">
+                                                <form action="/del_item" method="POST">
+                                                    <input style="display: none;" type="text" name="it_id" value="{{ items['items_id'] }}">
+                                                    
+                                                    <div class="form-group">
+                                                        <!-- <a role="button">add to cart</a> -->
+                                                        <a>
+                                                            <button type="submit" class="trashh">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                                    fill="currentColor" class="bi bi-trash-fill"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                                                </svg>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                        
+                                                </form>
+                                                
+
+                                            </span>
+                                            <br>${{ items['price'] }}
+
+                                        </td>
+                                    </div>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        {% endfor %}
+                        <!-- <div class='line'></div>
+                        <table class='order-table'>
+                            <tbody>
+                                <tr>
+                                    <td><img src='../static/images/RBF3_1_1000x1000-removebg-preview.png' class='full-width res-img'></img>
+                                    </td>
+
+                                    <td>
+                                        <br> <span class='thin'>starfish toy</span><span id="x">
+                                            <button class="trashh">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                                </svg>
+                                            </button>
+                                        </span> <br> $10.00
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                        <div class='line'></div>
+                        <div class='total'>
+                            <h2 style="float: left;">
+                                total
+                            </h2>
+
+                            <h2 style="float: right;">
+                                $40.00
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class='credit-info credit-ress'>
+                    <div class='credit-info-content'>
+                        <table class='half-input-table'>
+                            <tr>
+                                <td>
+                                    <h2 style="margin-top: -3px;">
+                                        Please enter your payment info
+                                    </h2>
+                                </td>
+
+                            </tr>
+                        </table>
+                        <div class="payment-form-11">
+                            Card Number
+                            <input class='input-field'></input>
+                            Card Holder
+                            <input id="DIV1" class='input-field'></input>
+                            <table class='half-input-table'>
+                                <tr>
+                                    <td> Expires
+                                        <input class='input-field'></input>
+                                    </td>
+                                    <td>CVC
+                                        <input class='input-field'></input>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button onclick="creditCardValidation()" class='pay-btn'>Checkout</button>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function creditCardValidation(creditCradNum) {
+                var regEx = /^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/;
+                var x = document.getElementsByTagName("DIV1")[0];
+
+
+                if (creditCradNum.value.match(regEx)) {
+
+                    return true;
+
+
+                } else {
+                    alert("Please enter a valid credit card number.");
+                    return false;
+
+                }
+            }
+        </script>

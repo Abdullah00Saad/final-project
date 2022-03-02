@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>work with us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/style_form.css">
+
+</head>
+
+<body class="img" style="background-image: url('../static/images/pexels-richard-boskovits-57678.jpg');  background-position: center;
+background-attachment: fixed;
+background-size: cover; overflow: scroll; ">
+    <a href="/">
+        <img style="float: left;" src="../static/images/white-logo copy.png">
+    </a>
+    <section style="margin-top: -60px !important;" class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">
+                        <a style="color: #2C847B;" href="/services">services</a> / work with us
+                    </h2>
+                </div>
+            </div>
+            <div style="margin-top: -20px !important;" class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+
+                        <form action="/work_with_us" method="POST" enctype="multipart/form-data" class="signin-form">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="email adress" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="address" class="form-control" placeholder="adress" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" class="form-control" placeholder="phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="profession"></label> -->
+                                <select class="form-control" name="profession" id="profession">
+									<option value="Profession" selected disabled>profession</option>
+									<option value="grooming">Grooming</option>
+									<option value="breeding">Breeding</option>
+									<option value="mating">Mating</option>
+									<option value="training">Training</option>
+									<option value="all">all</option>
+
+								</select>
+                            </div>
+                            <div class="form-group">
+                                <label class="fileup" style="margin-left: 10px  !important; cursor: pointer; " for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										viewBox="0 0 20 17">
+										<path
+											d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" />
+									</svg> <span>upload your CV&hellip;</span>
+									<input type="file" name="cv" id="file-2"
+										class="inputfile inputfile-2 p-4 input-work"
+										data-multiple-caption="{count} files selected" multiple
+										style="display: none;" />
+							</div>
+							<div class="form-group">
+								<label for="medical-cond">why did you choose to work with us?</label>
+                                <textarea id="medical-cond" name="message" class="form-control" placeholder="type here.." rows="4" style="border-radius: 5px !important; resize: none;" cols="40"></textarea>
+                            </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">apply</button>
+                    </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/popper.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

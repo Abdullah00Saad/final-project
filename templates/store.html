@@ -1,0 +1,798 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <link rel="stylesheet" href="../static/css/style2.css" />
+    <link rel="stylesheet" href="../static/css/sub.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/log-in.css"> -->
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/profile-dropdown.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+
+    <title>online store</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- ------------------------------------------------------------------- navbar -------------------------------------------------------------------- -->
+
+        <div class="logo">
+            <!-- header inner -->
+            <div class="header-top">
+                <div class="header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                                <div class="full">
+                                    <div class="center-desk">
+                                        <div class="logo">
+
+                                            <a id="MyLogo" href="/"><img src="../static/images/logo.png" alt="#" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                                <div class="menu-area">
+                                    <div class="limit-box">
+                                        <nav class="main-menu">
+                                            <ul class="menu-area-main">
+
+                                                <li class="active res-home-nav"> <a href="/">Home</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a id="white-nav" href="/#our_services">
+                                                        our services
+                                                    </a>
+                                                </li>
+                                                <li> <a id="cont-res" href="/contact_us">contact us</a> </li>
+                                                {% if user_name %} {% for user_names in user_name %}
+                                                <li>
+                                                    <a style="width:auto;" role="button" class="nav-blue">
+
+
+                                                        <div class="dropdown-prof">
+                                                            <button style="margin-right: 100px;" class="dropdown-button-prof">
+                                                 <h4 style="font-weight: bolder;"> {{ user_names['username'] }}</h4>
+                                              </button>
+                                                            <div class="dropdown-list-prof">
+                                                                <img src="../static/profile_img/{{ user_names['pic'] }}">
+                                                                <a href="/profile">profile</a>
+
+                                                                <a href="/logout">log out</a>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a style="padding: 0px !important;" href="/payment_cart">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2C847B" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                        </svg>
+
+                                                    </a>
+                                                </li>
+                                                {% endfor %} {% else %}
+                                                <li> <a style="color: #1d425a !important;" id="white-nav" role="button" href="/sign_up">sign up</a> </li>
+                                                {% endif %}
+                                                <li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <br>
+
+
+
+    <!-- ------------------------------------------------------------------- trending products -------------------------------------------------------------------- -->
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <div class="trends">
+        <div class="bbb_background"></div>
+        <div class="bbb_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="bbb_container">
+                        <h2 class="bbb_title">our trending products</h2>
+                        <div class="bbb_text">
+                            <p>Find the best selling products in 2022!</p>
+                        </div>
+                        <div class="bbb_slider_nav">
+                            <div class="bbb_prev bbb_nav"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style=" margin-top: 10px !important;" fill="white" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                </svg></div>
+                            <div class="bbb_next bbb_nav">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style=" margin-top: 10px !important;" fill="white" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="bbb_slider_container">
+                        <div class="owl-carousel owl-theme bbb_slider">
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/Rectangle_275-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">cats</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Puzzle Toy
+                                                </a></div>
+                                            <div class="bbb_price">$9.00</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/Rectangle_276-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">dogs</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Ballistic Bird
+                                                </a></div>
+                                            <div class="bbb_price">$5.80</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/CA448__1_-20180904222233-20180904222638-1000x1000-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">cats</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Better Bee
+                                                </a></div>
+                                            <div class="bbb_price">$12.00</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/CT53__1_-20210210060215-20210210060256-1000x1000-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">cats</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Teaser wheel
+                                                </a></div>
+                                            <div class="bbb_price">$8.00</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/CA425_1_1000x1000-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">cats</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Active Sway
+                                                </a></div>
+                                            <div class="bbb_price">$12.00</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="bbb_item is_new">
+                                    <div class="bbb_image d-flex flex-column align-items-center justify-content-center">
+                                        <img src="../static/images/RBF3_1_1000x1000-removebg-preview.png" alt="">
+                                    </div>
+                                    <div class="bbb_content">
+                                        <div class="bbb_category"><a href="">cats</a></div>
+                                        <div class="bbb_info clearfix">
+                                            <div class="bbb_name"><a href="">Starfish toy
+                                                </a></div>
+                                            <div class="bbb_price">$10.00</div>
+                                        </div>
+                                    </div>
+                                    <ul class="bbb_marks">
+
+                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <!-------------------------------------------------------------------- store -------------------------------------------------------------------- -->
+
+
+    <section class="store">
+        <!------------------------------------------- filters --------------------------------------->
+        <section class="filters-section-store">
+            <ul>
+
+                <li class="list active" data-filter="all">
+                    <img src="../static/images/bed-removebg-preview.png" style="width: 100px; height:100px">
+                    <br>
+                    <h4 class="filter-name">beds and furniture</h4>
+                </li>
+                <li class="list active" data-filter="dog">
+                    <img src="../static/images/care-removebg-preview.png" style="width: 100px; height:100px">
+                    <br>
+                    <h4 class="filter-name">care and health</h4>
+                </li>
+
+                <li class="list active" data-filter="bird">
+                    <img src="../static/images/toys-removebg-preview.png" style="width: 100px; height:100px">
+                    <br>
+                    <h4 class="filter-name">toys</h4>
+                </li>
+                <li class="list active" data-filter="small-pets">
+                    <img src="../static/images/catfood.jpg" style="width: 100px; height:100px">
+                    <br>
+                    <h4 class="filter-name">food</h4>
+                </li>
+                <li class="list active" data-filter="small-pets">
+                    <img src="../static/images/kindpng_5010603.png" style="width: 100px; height:100px">
+                    <br>
+                    <h4 class="filter-name">cages and tanks</h4>
+                </li>
+
+            </ul>
+
+            <br>
+
+        </section>
+        <h2 id="res-prod" style=" color: #20405f !important; margin-left:45px !important; letter-spacing:2px; ">
+            products found:</h2>
+        <!------------------------------------------- filters --------------------------------------->
+
+        <div class="row row-ee pb-5 mb-4">
+            {% for item in items %}
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+
+                <div class="card rounded shadow-sm border-0">
+                    <div class="card-body p-4"><img style="height: 200px !important;width:200px !important" src="../static/items_img/{{ item['photo'] }}" alt="" class="img-fluid d-block mx-auto mb-3">
+                        <h3> <a href="" class="text-dark">{{ item['name'] }}™</a></h3><br>
+                        <h2 id="price">
+                            {{ item['price'] }}$
+                        </h2>
+                        <h5 style="overflow: hidden;">{{ item['description'] }}</h5><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><br>
+                        <h3 onclick="myFunctionproduct()" class="read-more">read more....</h3>
+                        <form action="/store" method="POST">
+                            {% for user_names in user_name %}
+                            <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                            <input style="display: none;" type="text" name="id_item" value="{{ item['id'] }}">
+                            <input style="display: none;" type="text" name="item_name" value="{{ item['name'] }}">
+                            <input style="display: none;" type="text" name="item_price" value="{{ item['price'] }}">
+                            <input style="display: none;" type="text" name="item_photo" value="{{ item['photo'] }}">
+                            <div class="form-group">
+                                <!-- <a role="button">add to cart</a> -->
+                                <button class="btn btn-add1 btn-primary">+</button>
+                            </div>
+
+                        </form>
+                        <!-- <button class="btn btn-add1 btn-primary">+</button> -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+            <!-- <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+
+                Card
+                <div class="card rounded shadow-sm border-0">
+                    <div class="card-body p-4"><img style="height: 200px !important;width:200px !important" src="https://9ed48207422fa7fc5013-a6297eb5ec0f30e883355c8680f3b2d6.ssl.cf2.rackcdn.com/WC51_1_1000x1000.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                        <h3> <a href="" class="text-dark">Cat Wubba™</a></h3><br>
+                        <h2 id="price">
+                            $7.00
+                        </h2>
+                        <h5>Unique fabric invites on-going solo play while a durable fabric lasts longer dog pawLong body encourages kicking instincts</h5><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><br>
+                        <h3 onclick="myFunctionproduct()" class="read-more">read more....</h3>
+                        <button class="btn btn-add1 btn-primary">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+
+
+                Card
+                <div class="card rounded shadow-sm border-0">
+                    <div class="card-body p-4"><img style="height: 200px !important;width:200px !important" src="https://9ed48207422fa7fc5013-a6297eb5ec0f30e883355c8680f3b2d6.ssl.cf2.rackcdn.com/WC51_1_1000x1000.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                        <h3> <a href="" class="text-dark">Cat Wubba™</a></h3><br>
+                        <h2 id="price">
+                            $7.00
+                        </h2>
+                        <h5>Unique fabric invites on-going solo play while a durable fabric lasts longer dog pawLong body encourages kicking instincts</h5><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><br>
+                        <h3 onclick="myFunctionproduct()" class="read-more">read more....</h3>
+                        <button class="btn btn-add1 btn-primary">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+
+
+                Card
+                <div class="card rounded shadow-sm border-0">
+                    <div class="card-body p-4"><img style="height: 200px !important;width:200px !important" src="https://9ed48207422fa7fc5013-a6297eb5ec0f30e883355c8680f3b2d6.ssl.cf2.rackcdn.com/WC51_1_1000x1000.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                        <h3> <a href="" class="text-dark">Cat Wubba™</a></h3><br>
+                        <h2 id="price">
+                            $7.00
+                        </h2>
+                        <h5>Unique fabric invites on-going solo play while a durable fabric lasts longer dog pawLong body encourages kicking instincts</h5><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg><br>
+                        <h3 onclick="myFunctionproduct()" class="read-more">read more....</h3>
+                        <button class="btn btn-add1 btn-primary">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div> -->
+
+
+
+
+
+            <!-- ------------------------------------------------------------------- preview -------------------------------------------------------------------- -->
+
+
+        </div>
+    </section>
+
+
+    <div class="product-view" id="product-view">
+        <div class=" p">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <div class="product-photo">
+                        <img class="product-photo-style" src="../static/images/product-photo1.png">
+                    </div>
+
+
+
+                </div>
+                <div class=" col-md-8">
+                    <div class="product-desc">
+                        <h1 class="product-title">
+                            KONG Cat Wubba™
+                        </h1>
+                        <h3 class="product-detailes">
+                            $7.00 <span style="color:#67727C;">in shipping</span>
+                        </h3>
+                    </div>
+                    <div class="">
+                        <h4 class="pd">
+                            this product specifically developed to appeal to a cat's instinctive desire to stalk and capture prey. All Cat Wubba™ toys have a rattle sound and are infused with KONG's premium North American catnip for added attraction.
+                        </h4>
+                        <button class="btn btn-primary nav_button " id="btns" style="background-color: #2C847B;  left: 95px !important;
+                         color: white;">add
+                            to cart</button>
+                    </div>
+                    <div class="add-to-cart">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <br><br>
+    <!-- ------------------------------------------------------------------- sales -------------------------------------------------------------------- -->
+
+
+    <!-- ------------------------------------------------------------------- footer -------------------------------------------------------------------- -->
+
+
+    <footer style="color: aliceblue !important;" class="container-fluid bg-grey py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <img src="../static/images/lolologo.png" class="w-75 logo-footer">
+                                <h4 class="footer-white">+9647713636363</h4>
+                                <h4 class="footer-white">curious22@gmail.com</h4>
+                                <h6 style="font-size: x-small !important;">
+                                    copyright © 2022 cs50x, all right reserved
+                                </h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 px-4">
+                            <h3 class="footer-white">USEFUL LINKS</h3>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>
+                                            <a href="/">
+                                                <h4 class="footer-white"> Home</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/work_with_us">
+                                                <h4 class="footer-white">work with us</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/adoption">
+                                                <h4 class="footer-white">adopt a pet</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/store">
+                                                <h4 class="footer-white">online store</h4>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h3 class="footer-white">INFORMATION</h3>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <h4 class="footer-white">about us</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/sign_up">
+                                                <h4 class="footer-white">join us</h4>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h5 style="color: darkgray !important;">donations (soon)</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h3 class="footer-white"> CONTACT US</h3>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <h4 class="footer-white">instagram</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4 class="footer-white">facebook</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4 class="footer-white">twitter</h4>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!---- ------------------------- javascripty -- --------------------------->
+
+    <script>
+        $(document).ready(function() {
+
+
+            if ($('.bbb_slider').length) {
+                var trendsSlider = $('.bbb_slider');
+                trendsSlider.owlCarousel({
+                    loop: false,
+                    margin: 30,
+                    nav: false,
+                    dots: false,
+                    autoplayHoverPause: true,
+                    autoplay: false,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        575: {
+                            items: 2
+                        },
+                        991: {
+                            items: 3
+                        }
+                    }
+                });
+
+                trendsSlider.on('click', '.bbb_fav', function(ev) {
+                    $(ev.target).toggleClass('active');
+                });
+
+                if ($('.bbb_prev').length) {
+                    var prev = $('.bbb_prev');
+                    prev.on('click', function() {
+                        trendsSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if ($('.bbb_next').length) {
+                    var next = $('.bbb_next');
+                    next.on('click', function() {
+                        trendsSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+
+
+        });
+    </script>
+
+    <!--  -->
+    <script>
+        function myFunctionproduct() {
+            var div = document.getElementById("product-view");
+            if (div.className === "active") {
+                div.className = "";
+            } else {
+                div.className = "active";
+            }
+        }
+    </script>
+    <!---- ------------------------- javascripty -- --------------------------->
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+
+
+    <!---- ------------------------- javascripty -- --------------------------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav1").style.display = "block";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav1").style.display = "none";
+        }
+    </script>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

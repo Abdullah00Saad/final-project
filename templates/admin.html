@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="sub.css" /> -->
+    <link rel="stylesheet" href="../static/css/style2.css" />
+    <link rel="stylesheet" href="../static/css/payment.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+    <title>admin's form</title>
+</head>
+
+<body><br><br>
+
+
+
+    <div class="shopping-cart">
+
+        <div>
+            <div style="float: left; display:inline">
+                <button id="back-to-store">
+                    <a href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 0px; " width="25" height="25"
+                            fill="#123146" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                        </svg>
+                        <h2 style="color: rgb(39, 80, 82); float:right;display:inline">back to home</h2>
+                    </a>
+
+                </button>
+
+            </div>
+
+        </div>
+        <div class='container-get'>
+
+            <div style="background-color:#c1c7c6 !important; padding-bottom:650px !important" class='window'>
+                <div style="background-color:#c1c7c6 !important;" class='order-info'>
+                    <div class='order-info-content'>
+
+
+
+
+
+
+                        <form style="background-color:#c1c7c6 !important" method="POST" enctype="multipart/form-data" action="/admin" id="contactForm" name="contactForm" class="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="label" for="name">Name</label><br>
+                                        <input type="text" name="name" id="work_fullname" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="label" for="email">Kind</label><br>
+                                        <input type="text" name="animal" id="work_email" placeholder="kind">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="label" for="subject">quantity</label><br>
+                                        <input type="number" name="quantity" id="work_password" placeholder="quantity">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="label" for="subject">price</label><br>
+                                        <input type="number" name="price" id="work_number" placeholder="price">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="label" for="subject">description</label><br>
+                                        <input type="username" name="description" id="work_address" placeholder="description">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="label" for="#">photo</label><br>
+                                    <input name="pic" type="file" ...>
+                                    <br>
+
+
+                                    <h2 style="float: left;">
+                                        <br>
+                                        <button type="submit" style="width: 100% !important; font-size:small !important; margin-top:-30px !important; margin-left:100px 
+                                            " class="btn btn-primary button-18 ">
+                                            submit
+                                        </button>
+                                    </h2>
+
+
+
+
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>

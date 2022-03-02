@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>home</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <link rel="stylesheet" href="../static/css/services.css">
+    <link rel="stylesheet" href="../static/css/log-in.css">
+    <link rel="stylesheet" href="../static/css/profile-dropdown.css">
+    <!-- login modal -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="../static/js/indexx.js"></script>
+
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dae67631234507.564a1d230a290.gif" alt="#" />
+        </div>
+    </div>
+
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- side navigation -->
+
+
+
+
+
+        <!-- header inner -->
+        <div class="header-top">
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+
+                                        <a id="MyLogo" href="/"><img src="../static/images/logo.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        {% if user_name %} {% for user_names in user_name %}
+                                        <ul class="menu-area-main">
+
+                                            <li class="active"> <a class="nav-blue" href="/">Home</a>
+                                            </li>
+                                            <li> <a class="nav-blue" href="#about_us">about us</a> </li>
+                                            <li> <a class="nav-blue" href="#our_services">our services</a> </li>
+                                            <li> <a class="nav-blue" href="/contact_us">contact us</a> </li>
+                                            <li><a class="nav-blue" href="#careers">careers</a></li>
+                                            <li>
+                                                <a style="width:auto;" role="button" class="nav-blue">
+
+
+                                                    <div class="dropdown-prof">
+                                                        <button style="margin-right: 100px;" class="dropdown-button-prof">
+                                          <h4 style="font-weight: bolder; margin-right: 100px;"> {{ user_names['username'] }}</h4>
+                                       </button>
+                                                        <div class="dropdown-list-prof">
+                                                            <img src="../static/profile_img/{{ user_names['pic'] }}">
+                                                            <a href="/profile">profile</a>
+
+                                                            <a href="/log_out">log out</a>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        {% endfor %} {% else %}
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a class="nav-blue" href="/">Home</a>
+                                            </li>
+                                            <li> <a class="nav-blue" href="#about_us">about us</a> </li>
+                                            <li> <a class="nav-blue" href="#our_services">our services</a> </li>
+                                            <li> <a class="nav-blue" href="/contact_us">contact us</a> </li>
+                                            <li><a class="nav-blue" href="#careers">careers</a></li>
+                                            <li> <a class="nav-blue" href="/log_in">Log in</a> </li>
+                                            {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <section class="slider_section">
+                <div class="banner_main">
+                    <div class="container">
+                        <div class="row d_flex">
+                            <div class="col-xl-7 col-lg-5 col-md-5 col-sm-12 ">
+                                <div class="text-bg">
+                                    <h1 style="font-family: 'Asul', sans-serif !important; font-weight: bold !important;
+                           font-size: 50px !important;">Give your pet the L
+                                        <svg width="38" height="38" aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                 <path fill="currentColor"
+                                    d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z">
+                                 </path>
+                              </svg> VE they deserve
+                                    </h1>
+                                    <span>We are specialized in adopting animals, providing high-quality supplies, and
+                              professional services. <br>
+                              <a href="/sign_up">join us today</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12">
+                        <div class="text-img">
+                           <div class="top">
+                              <figure>
+                                 <img src="../static/images/top-background.png" style="position: fixed; top:0; right:0;
+                                 " />
+                              </figure>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+      </div>
+   </header>
+   <!-- Best  -->
+
+   <div class="Best">
+      <div class="container">
+         <div class="row">
+            <!-- Features Holder-->
+            <div class="col-md-10 offset-md-1 features-holder">
+               <div class="row">
+                  <!-- Features Item -->
+                  <div class="col-md-3 col-sm-12 text-center mt-4">
+                     <div style=" background-color: #384C5F !important;"
+                        class="shadow rounded feature-item p-3 mb-4 shadow-1" data-aos="fade-up">
+
+                        <h1 class="first-cards">
+                           <span style="color: white !important; " class="count">200</span>
+
+                                    </h1>
+                                    <h3 class="first-cards">products</h3>
+                                </div>
+                            </div>
+                            <!-- End of Feature Item -->
+                            <!-- Features Item -->
+                            <div class="col-md-3 col-sm-12 text-center mt-4">
+                                <div class="shadow rounded feature-item p-3 mb-4 shadow-1" style=" background-color: #384C5F !important;" data-aos="fade-up">
+
+                                    <h1 class="first-cards">
+                                        <span style="color: white !important;" class="count">1000</span>
+                                    </h1>
+                                    <h3 class="first-cards">visitors</h3>
+                                </div>
+                            </div>
+                            <!-- End of Feature Item -->
+
+                            <!-- Features Item -->
+                            <div class="col-md-3 col-sm-12 text-center mt-4">
+                                <div class="shadow rounded feature-item p-3 mb-4 shadow-1" style=" background-color: #384C5F !important;" data-aos="fade-up">
+
+                                    <h1 class="first-cards">
+                                        <span style="color: white !important;" class="count">5500</span>
+
+
+                                    </h1>
+                                    <h3 class="first-cards">monthly sales</h3>
+                                </div>
+                            </div>
+                            <!-- End of Feature Item -->
+
+                            <!-- Features Item -->
+                            <div class="col-md-3 col-sm-12 text-center mt-4">
+                                <div class="shadow rounded feature-item p-3 mb-4 shadow-1" style=" background-color: #384C5F !important;" data-aos="fade-up">
+
+                                    <h1 class="first-cards">
+                                        <span style="color: white !important;" class="count">730</span>
+                                    </h1>
+                                    <h3 class="first-cards">happy-costumers</h3>
+                                </div>
+                            </div>
+                            <!-- End of Feature Item -->
+                        </div>
+                    </div>
+                    <!-- End of Features Holder-->
+                </div>
+        </div>
+        </div>
+        <!-- end Best -->
+        <!-- about us -->
+        <div data-aos="fade">
+            <div id="about_us">
+
+
+                <div id="contact">
+                    <div class="container" id="c333">
+                        <div class="row row-contact">
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                                <div class="rable-box">
+                                    <figure>
+                                        <img src="../static/images/about our business-img.png" style="  transform: translateY(-3vw) ;
+                     " alt="#" />
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                                <h1 class="mb-4" style="font-family: Asul !important;
+               font-style: normal !important;
+               font-weight: bold !important;
+               font-size: 38.88px !important;
+
+               text-transform: capitalize !important;
+
+               color: #384C5F !important;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                        </svg> about our business
+                                </h1>
+                                <p class="mb-4"> If you are looking for quality supplies and pet care experts then you are looking at the right direction for we are the right place cater all your pet needs. our job is to provide you with the best quality of products and
+                                    trusted profissionals to care for your pet needs. additionally, we enable you to find and adopt your new pet, contacting their owner and save another life by giving them a forever home, all in one platform !
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end about us -->
+        <div id="our_services">
+
+
+            <div class="contact" id="c444">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="titlepage">
+                                <h1 style="font-family: Asul !important;
+                  font-style: normal !important;
+                  font-weight: bold !important;
+                  font-size: 38.88px !important;
+
+                  color: #384C5F !important;">Our Services</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade">
+                        <div class="row">
+
+                            <div class="col-md-10 offset-md-1 features-holder">
+                                <div class="row">
+                                    <!-- services -->
+                                    <div class="col-md-4 col-sm-12 text-center mt-4">
+                                        <div id="hov" class="shadow rounded feature-item p-4 mb-4 hov">
+                                            <div class="row">
+
+                                                <div class="my-4">
+                                                    <i class="lnr lnr-cog fs-40"></i>
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <h2>pet care service</h2>
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                                                    </p>
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <img src="../static/images/dog2.png" />
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+
+
+                                                    <button class="button-18" role="button">
+                                       <a style=" font-size: 16px !important;
+                                       font-weight: 600 !important;" href="/services">
+                                          services
+                                       </a>
+
+                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of services -->
+                                    <!--  -->
+                                    <div class="col-md-4 col-sm-12 text-center mt-4">
+                                        <div id="hov" class="shadow rounded feature-item p-4 mb-4 hov">
+                                            <div class="row">
+
+                                                <div class="my-4">
+                                                    <i class="lnr lnr-cog fs-40"></i>
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <h2>adopt a pet</h2>
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <img src="../static/images/bird.png" width="52.5%" height="52.5%" />
+
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <button class="button-18" role="button">
+                                       <a style=" font-size: 16px !important;
+                                    font-weight: 600 !important;" href="/adoption">
+                                          adopting
+                                       </a>
+
+                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of services -->
+                                    <!--  -->
+                                    <div class="col-md-4 col-sm-12 text-center mt-4 ">
+                                        <div id="hov" class="hellllooo shadow rounded feature-item p-4 mb-4 hov">
+                                            <div class="row">
+
+                                                <div class="my-4">
+                                                    <i class="lnr lnr-cog fs-40"></i>
+                                                </div>
+                                                <div class="col-md-12 p-2">
+                                                    <h2>online store</h2>
+
+                                                </div>
+                                                <div id="txt-ser" class="col-md-12 p-2">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+                                                </div>
+
+                                                <div id="img-ser" class="col-md-12 p-2 img-ser">
+                                                    <img src="../static/images/fish.png" />
+
+                                                </div>
+                                                <div class="col-md-12 p-3">
+                                                    <button class="button-18" role="button">
+                                       <a style=" font-size: 16px !important;
+                                    font-weight: 600 !important;" href="/store">
+                                          store
+                                       </a>
+                                    </button>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <!-- End of services -->
+                                </div>
+                            </div>
+                            <!-- End of services Holder-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up">
+            <div id="careers" class="contact">
+                <div class="container">
+                    <div class="row row-contact">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                            <h1 style="font-family: Asul !important;
+               font-style: normal !important;
+               font-weight: bold !important;
+               font-size: 38.88px !important;
+
+               text-transform: capitalize !important;
+
+               color: #384C5F !important;" class="mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+                     </svg>Careers
+                            </h1>
+                            <p class="mb-4">
+                                are you a pet care professional, or a business owner associated with animals and looking for a job opportunity? we're always open to hiring new employees and working with small business/stores owners !
+                                <a class="workwith-bg" href="work with us.html">work with us</a>
+                            </p>
+                        </div>
+
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                            <div class="rable-box">
+                                <figure>
+                                    <img style="width: 554px;
+                     height: 516.6px;" src="../static/images/hhiii.png" alt="#" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- careers -->
+
+
+
+
+        <!-- Partnership -->
+
+
+
+
+        <div class="contact" id="c444">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titlepage">
+                            <h1 style="font-family: Asul !important;
+                  font-style: normal !important;
+                  font-weight: bold !important;
+                  font-size: 38.88px !important;
+
+                  color: #384C5F !important;">Partnership</h1>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade">
+                    <div class="row">
+
+                        <div class="container">
+                            <div class="row row-cols-1">
+                                <div class="col">
+                                    <img src="../static/images/image 14.png">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br> <br><br>
+
+
+
+
+
+
+
+
+        <!--  footer -->
+        <footer style="color: aliceblue !important;" class="container-fluid bg-grey py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="logo-part">
+                                    <img src="../static/images/lolologo.png" class="w-75 logo-footer">
+                                    <h4 class="footer-white">+9647713636363</h4>
+                                    <h4 class="footer-white">curious22@gmail.com</h4>
+                                    <h6 style="font-size: x-small !important;">
+                                        copyright © 2022 cs50x, all right reserved
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 px-4">
+                                <h3 class="footer-white">USEFUL LINKS</h3>
+                                <div class="row ">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white"> Home</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">work with us</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">adopt a pet</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">online store</h4>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 px-4">
+                                <h3 class="footer-white">INFORMATION</h3>
+                                <div class="row ">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">about us</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">join us</h4>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: darkgray !important;">donations (soon)</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <h3 class="footer-white"> CONTACT US</h3>
+                                <div class="row ">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">instagram</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">facebook</h4>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h4 class="footer-white">twitter</h4>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+        <!-- Javascript files-->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/popper.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+
+        <script src="../static/js/plugin.js"></script>
+        <!-- sidebar -->
+        <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+        <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+        <script>
+            $(window).scroll(function() {
+                $(".top").css("opacity", 1 - $(window).scrollTop() / 253);
+            });
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script>
+            $('.count').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 10000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        </script>
+        <!-- <script>
+      $(document).ready(function(){
+          $("#myBtn").click(function(){
+              $("#exampleModalToggle").modal("show");
+          });
+      });
+  </script> -->
+
+</body>
+
+</html>

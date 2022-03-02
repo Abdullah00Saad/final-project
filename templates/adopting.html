@@ -1,0 +1,892 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="../static/css/style2.css" />
+
+    <link rel="stylesheet" href="../static/css/sub.css" />
+    <link rel="stylesheet" href="../static/css/profile-dropdown.css">
+
+
+
+
+    <!-- --------------------- -->
+    <title>adopting</title>
+</head>
+<style>
+    input {
+        border: none !important;
+        outline: none !important;
+        background-color: #dbdbdb93 !important;
+        border-radius: 5px !important;
+    }
+    
+    #work_fullname1 {
+        width: 300px !important;
+        margin-top: -20px !important;
+    }
+    
+    #work_email1 {
+        width: 300px !important;
+        padding: 10px 15px !important;
+    }
+    
+    #work_password1 {
+        width: 300px !important;
+    }
+    
+    #filter-adopt2 {
+        width: 300px !important;
+    }
+    
+    .dropdown-menu {
+        height: max-content;
+    }
+</style>
+
+<body>
+    <header>
+        <!-- ------------------------------------------------------------------- navbar -------------------------------------------------------------------- -->
+
+
+        <div class="logo">
+            <!-- header inner -->
+            <div class="header-top">
+                <div class="header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                                <div class="full">
+                                    <div class="center-desk">
+                                        <div class="logo">
+
+                                            <a id="MyLogo" href="/"><img src="../static/images/logo.png" alt="#" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                                <div class="menu-area">
+                                    <div class="limit-box">
+                                        <nav class="main-menu">
+                                            <ul class="menu-area-main">
+
+                                                <li class="active"> <a id="white-nav" href="/">Home</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a id="white-nav" href="/#our_services">
+                                                        our services
+                                                       </a>
+                                                </li>
+                                                <li> <a id="white-nav" href="/contact_us">contact us</a> </li>
+                                                {% if user_name %} {% for user_names in user_name %}
+                                                <li>
+                                                    <a style="width:auto;" role="button" class="nav-blue">
+
+
+                                                        <div class="dropdown-prof">
+                                                            <button class="dropdown-button-prof">
+                                                 <h4 style="font-weight: bolder;"> {{ user_names['username'] }}</h4>
+                                              </button>
+                                                            <div class="dropdown-list-prof">
+                                                                <img src="../static/profile_img/{{ user_names['pic'] }}">
+                                                                <a href="/profile">profile</a>
+
+                                                                <a href="/log_out">log out</a>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                    </a>
+                                                </li>
+                                                {% endfor %} {% else %}
+                                                <li> <a id="white-nav" role="button" href="/sign_up" style="color: #fff;">sign up</a> </li>
+                                                <li>
+
+                                                </li>
+                                                {% endif %}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <br>
+
+
+
+
+
+    <!-- nav -->
+
+    <br>
+    <!-- ------------------------------------------------------------------- Swiper -------------------------------------------------------------------- -->
+    <div class="adopting-page">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+        <body>
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+                <div class="parallax-bg" style="background-image: url('../static/images/pppppppp.jpg');filter:brightness(0.8);
+                 " data-swiper-parallax="-23%">
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="title" data-swiper-parallax="-300">adopt a pet, save another life</div>
+
+                        <div class="text" data-swiper-parallax="-100">
+                            <p>
+                                When you adopt, you save a loving animal by making them part of your family and open up shelter space for another animal who might desperately need it.
+
+                            </p>
+                            <br>
+                            <a class="promote-linkss" role="button" style="font-size:20px;cursor:pointer" id="prmt-btn" href="/promote_pet"> sign your pet for adopting</a>
+
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title" data-swiper-parallax="-300">adopt a pet, save another life</div>
+                        <div class="text" data-swiper-parallax="-100">
+                            <p>
+                                When you adopt, you save a loving animal by making them part of your family and open up shelter space for another animal who might desperately need it.
+
+                            </p>
+                            <br>
+                            <a class="promote-linkss" role="button" style="font-size:20px;cursor:pointer" id="prmt-btn" href="/promote_pet"> sign your pet for adopting</a>
+
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title" data-swiper-parallax="-300">adopt a pet, save another life</div>
+                        <div class="text" data-swiper-parallax="-100">
+                            <p>
+                                When you adopt, you save a loving animal by making them part of your family and open up shelter space for another animal who might desperately need it.
+
+                            </p>
+                            <br>
+                            <a class="promote-linkss" role="button" style="font-size:20px;cursor:pointer" id="prmt-btn" href="/promote_pet"> sign your pet for adopting</a>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+
+
+
+
+            <!-- ------------------------------------------------------------------- search filters -------------------------------------------------------------------- -->
+
+            <section class="filters-section">
+                <ul>
+                    <h2>look for a:</h2>
+                    <li class="list active" data-filter="all">all</li>
+                    <li class="list active" data-filter="dog">dogs</li>
+                    <li class="list active" data-filter="cat">cats</li>
+                    <li class="list active" data-filter="bird">birds</li>
+                    <li class="list active" data-filter="small-pets">small pets</li>
+                </ul>
+            </section>
+
+
+
+            <!-- ------------------------------------------------------------------- cards -------------------------------------------------------------------- -->
+
+            <ul class="cards">
+                {% for pet in pets %}
+                <div class="itemBox {{ pet['kind'] }}">
+
+                    <a href="" class=" card">
+                        <img src="../static/pets_img/{{ pet['photo'] }}" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- <path /> -->
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">{{ pet['name'] }}</h2><span class="card__status">{{ pet['age'] }} months old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih | {{ pet['address'] }} +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                {% endfor %}
+
+                <!-- <div class="itemBox small-pets">
+
+                    <a href="" class="card">
+                        <img src="images/bunny.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">bunny</h2><span class="card__status">3 months</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox cat">
+
+                    <a href="" class=" card">
+                        <img src="images/lily.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">lily</h2><span class="card__status">1 year old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox bird">
+
+                    <a href="" class=" card">
+                        <img src="images/parrot.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">sally</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox small-pets">
+
+                    <a href="" class=" card">
+                        <img src="images/hamster.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">rei</h2><span class="card__status">1 month</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox dog">
+
+                    <a href="" class=" card">
+                        <img src="images/doggo.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">yuki</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox cat">
+
+                    <a href="" class=" card">
+                        <img src="images/kitten.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">bella</h2><span class="card__status">5 months</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox bird">
+
+                    <a href="" class=" card">
+                        <img src="images/rue.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">rue</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox dog">
+
+                    <a href="" class=" card">
+                        <img src="images/lucy.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">lucy</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox cat">
+
+                    <a href="" class=" card">
+                        <img src="images/lily.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">lily</h2><span class="card__status">1 year old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox bird">
+
+                    <a href="" class=" card">
+                        <img src="images/parrot.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">sally</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox small-pets">
+
+                    <a href="" class="card">
+                        <img src="images/bunny.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">bunny</h2><span class="card__status">3 months</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox dog">
+
+                    <a href="" class=" card">
+                        <img src="images/doggo.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">yuki</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox small-pets">
+
+                    <a href="" class="card">
+                        <img src="images/milk.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">milk</h2><span class="card__status">3 months</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox bird">
+
+                    <a href="" class=" card">
+                        <img src="images/rue.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">rue</h2><span class="card__status">2 years old</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="itemBox cat">
+
+                    <a href="" class=" card">
+                        <img src="images/tiger.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                    <path />
+                                </svg>
+
+                                <div class="card__header-text">
+                                    <h2 class="card__title">tiger</h2><span class="card__status">5 months</span>
+
+
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                dhay salih |
+                                baghdad, iraq
+                                +9647710000000
+                            </p>
+                        </div>
+                    </a>
+
+                </div> -->
+            </ul>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('.list').click(function() {
+                        const value = $(this).attr('data-filter');
+                        if (value == 'all') {
+                            $('.itemBox').show('10000');
+
+                        } else {
+                            $('.itemBox').not('.' + value).hide('10000');
+                            $('.itemBox').filter('.' + value).show('10000');
+                        }
+                    })
+
+
+                    $('.list').click(function() {
+                        $(this).addClass('active').sibilings().removeClass('active')
+
+                    })
+                })
+            </script>
+
+
+
+
+
+
+
+
+            <!-- ------------------------------------------------------------------- promote pet -------------------------------------------------------------------- -->
+
+
+
+
+            <!-- ------------------------------------------------------------------- footer -------------------------------------------------------------------- -->
+
+            <footer style="color: aliceblue !important;" class="container-fluid bg-grey py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="logo-part">
+                                        <img src="../static/images/lolologo.png" class="w-75 logo-footer">
+                                        <h4 class="footer-white">+9647713636363</h4>
+                                        <h4 class="footer-white">curious22@gmail.com</h4>
+                                        <h6 style="font-size: x-small !important;">
+                                            copyright © 2022 cs50x, all right reserved
+                                        </h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-4">
+                                    <h3 class="footer-white">USEFUL LINKS</h3>
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="/">
+                                                        <h4 class="footer-white"> Home</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/work_with_us">
+                                                        <h4 class="footer-white">work with us</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/adoption">
+                                                        <h4 class="footer-white">adopt a pet</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/store">
+                                                        <h4 class="footer-white">online store</h4>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6 px-4">
+                                    <h3 class="footer-white">INFORMATION</h3>
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <h4 class="footer-white">about us</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/sign_up">
+                                                        <h4 class="footer-white">join us</h4>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <h5 style="color: darkgray !important;">donations (soon)</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <h3 class="footer-white"> CONTACT US</h3>
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <h4 class="footer-white">instagram</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <h4 class="footer-white">facebook</h4>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <h4 class="footer-white">twitter</h4>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+            <!-- ------------------------------------------------------------------- js -------------------------------------------------------------------- -->
+
+            <script>
+                $(document).ready(function() {
+                    $('.dropdown-toggle').dropdown();
+                });
+            </script>
+
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <script>
+                function openNav() {
+                    document.getElementById("myNav").style.display = "block";
+                }
+
+                /* Close */
+                function closeNav() {
+                    document.getElementById("myNav").style.display = "none";
+                }
+            </script>
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    speed: 600,
+                    parallax: true,
+
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                $(document).ready(function() {
+                    $('.dropdown-toggle').dropdown();
+                });
+            </script>
+
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <script>
+                function openNav() {
+                    document.getElementById("myNav").style.display = "block";
+                }
+
+                /* Close */
+                function closeNav() {
+                    document.getElementById("myNav").style.display = "none";
+                }
+            </script>
+
+
+            <script>
+                function showFunction() {
+
+                    $('#exampleModalToggle2').modal('toggle');
+                    // $("#exampleModalToggle .close").click()
+                    //
+                    // $("#exampleModalToggle2 .close").click()
+                }
+            </script>
+
+
+
+
+            <script>
+                $(document).ready(function() {
+                    $("#myBtn").click(function() {
+                        $("#exampleModalToggle").modal("show");
+                    });
+                });
+            </script>
+
+
+
+
+
+
+            <!--  -->
+
+        </body>
+
+</html>
